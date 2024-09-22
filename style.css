@@ -8,12 +8,12 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0; /* 좌측 정렬 */
     padding: 20px;
 }
 
 header {
-    text-align: center;
+    text-align: left; /* 좌측 정렬 */
     margin-bottom: 40px;
 }
 
@@ -37,6 +37,7 @@ section h2 {
     padding-bottom: 5px;
     margin-bottom: 15px;
     color: #222;
+    text-align: left; /* 좌측 정렬 */
 }
 
 section p, section ul {
@@ -73,12 +74,13 @@ a:hover {
 .publication {
     display: flex;
     gap: 20px;
+    align-items: flex-start; /* 좌측 정렬 */
 }
 
 .publication img {
-    width: 150px;
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     border: 1px solid #ccc;
 }
 
@@ -99,16 +101,16 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
+/* 반응형 디자인 */
 @media (max-width: 600px) {
     .publication {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start; /* 좌측 정렬 유지 */
     }
 
     .publication img {
-        width: 100%;
-        max-width: 200px;
+        max-width: 100%;
+        height: auto;
     }
 
     .pub-info {
