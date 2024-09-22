@@ -78,7 +78,7 @@ a:hover {
 .publication img {
     width: 250px;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     border: 1px solid #ccc;
 }
 
