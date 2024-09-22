@@ -62,3 +62,56 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Publications Section */
+.publications {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.publication {
+    display: flex;
+    gap: 20px;
+}
+
+.publication img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.pub-info {
+    flex: 1;
+}
+
+.pub-info p {
+    margin: 5px 0;
+}
+
+.pub-info a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.pub-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .publication {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .publication img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .pub-info {
+        text-align: center;
+    }
+}
