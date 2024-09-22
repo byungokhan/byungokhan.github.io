@@ -3,73 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ByungOk Han - Researcher Profile</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #333;
-        }
-        p {
-            line-height: 1.6;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #333;
-            color: #fff;
-            margin-top: 20px;
-        }
-    </style>
+    <title>ByungOk Han - Researcher Profile</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>ByungOk Han - Researcher</h1>
-    <p>Senior Reseacher at ETRI</p>
+    <h1>ByungOk Han</h1>
+    <p>Senior Researcher at ETRI (Electronics and Telecommunications Research Institute)</p>
 </header>
 
 <div class="container">
-    <!-- About Me Section -->
+    <!-- Introduction Section -->
     <section>
         <h2>About Me</h2>
-        <p>I am ByungOk Han, a researcher in Computer Vision and Robotics. My research primarily focuses on [Brief Description of Your Research Focus]. I have a passion for exploring innovative solutions in [Your Specific Areas of Expertise].</p>
+        <p>
+            Hello, I am ByungOk Han, a Senior Researcher at the Electronics and Telecommunications Research Institute (ETRI) in South Korea. My research focuses on the development and application of information and communication technologies.
+        </p>
     </section>
 
     <!-- Research Interests Section -->
     <section>
         <h2>Research Interests</h2>
         <ul>
-            <li>Interest 1: [e.g., Machine Learning]</li>
-            <li>Interest 2: [e.g., Vision-Language Models]</li>
-            <li>Interest 3: [e.g., Autonomous Systems]</li>
+            <li>Artificial Intelligence and Machine Learning</li>
+            <li>Network Security and Cryptography</li>
+            <li>Internet of Things (IoT) Applications and Services</li>
         </ul>
     </section>
 
@@ -77,19 +41,8 @@
     <section>
         <h2>Experience</h2>
         <ul>
-            <li><strong>[Your Position]</strong> at [Institution Name] - [Start Date] to Present</li>
-            <li><strong>Previous Position:</strong> [Position] at [Previous Institution] - [Dates]</li>
-            <li><strong>Postdoctoral Researcher</strong> at [Institution Name] - [Dates]</li>
-        </ul>
-    </section>
-
-    <!-- Publications Section -->
-    <section>
-        <h2>Selected Publications</h2>
-        <ul>
-            <li>[Author Names], "[Paper Title]," <i>[Journal/Conference Name]</i>, [Year].</li>
-            <li>[Author Names], "[Paper Title]," <i>[Journal/Conference Name]</i>, [Year].</li>
-            <li>[Author Names], "[Paper Title]," <i>[Journal/Conference Name]</i>, [Year].</li>
+            <li><strong>Senior Researcher</strong>, ETRI, 20XX - Present</li>
+            <li><strong>Postdoctoral Researcher</strong>, [Previous Institution], 20XX - 20XX</li>
         </ul>
     </section>
 
@@ -97,24 +50,41 @@
     <section>
         <h2>Education</h2>
         <ul>
-            <li><strong>Ph.D. in [Field]</strong> - [University Name], [Year]</li>
-            <li><strong>M.Sc. in [Field]</strong> - [University Name], [Year]</li>
-            <li><strong>B.Sc. in [Field]</strong> - [University Name], [Year]</li>
+            <li><strong>Ph.D. in Electrical and Electronic Engineering</strong> - [University Name], 20XX</li>
+            <li><strong>M.S. in Electrical and Electronic Engineering</strong> - [University Name], 20XX</li>
+            <li><strong>B.S. in Electrical and Electronic Engineering</strong> - [University Name], 20XX</li>
         </ul>
     </section>
 
+    <!-- Publications Section -->
+    <section id="publications">
+        <h2>Publications</h2>
+        <!-- Publications will be loaded here -->
+    </section>
+
     <!-- Contact Section -->
-    <section>
-        <h2>Contact Information</h2>
+    <section class="contact">
+        <h2>Contact</h2>
         <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>Website: <a href="https://yourwebsite.com" target="_blank">yourwebsite.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+        <p>Phone: +82-10-1234-5678</p>
+        <p>Address: 218 Gajeongbuk-ro, Yuseong-gu, Daejeon, South Korea</p>
+        <p>Google Scholar: <a href="https://scholar.google.com/citations?user=aIL0mvoAAAAJ&hl=en" target="_blank">View My Profile</a></p>
     </section>
 </div>
 
 <footer>
-    <p>&copy; [Year] [Your Name]. All rights reserved.</p>
+    <p>&copy; 2023 ByungOk Han. All rights reserved.</p>
 </footer>
+
+<!-- JavaScript to load publications -->
+<script>
+    fetch('publications.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('publications').innerHTML += data;
+        })
+        .catch(error => console.error('Error loading publications:', error));
+</script>
 
 </body>
 </html>
